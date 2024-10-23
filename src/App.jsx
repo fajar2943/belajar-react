@@ -1,13 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import SignInPage from './pages/signIn'
-import SignUpPage from './pages/signup'
+import SignUpPage from './pages/signUp';
+import ErrorRoute from './pages/errorRoute';
 
-function App() {
-  return (
-    <>  
-      <SignUpPage/>
+const App = () => {
+  const myRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <div>Halaman utama</div>,
+      errorElement : <ErrorRoute/>,
+    },
+    {
+      path: "/login",
+      element: <SignInPage/>
+    },
+    {
+      path: "/register",
+      element: <SignUpPage/>
+    },
+  ]);
+
+  return(
+    <>
+      <RouterProvider router={myRouter}/>
     </>
   )
 }
