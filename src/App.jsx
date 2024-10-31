@@ -2,12 +2,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import SignInPage from './pages/signIn'
 import SignUpPage from './pages/signUp';
 import ErrorRoute from './pages/errorRoute';
+import DashboardPage from './pages/dashboard';
+import BalancePage from './pages/balance';
 
 const App = () => {
   const myRouter = createBrowserRouter([
     {
       path: "/",
-      element: <div>Halaman utama</div>,
+      element: <DashboardPage/>,
       errorElement : <ErrorRoute/>,
     },
     {
@@ -17,6 +19,10 @@ const App = () => {
     {
       path: "/register",
       element: <SignUpPage/>
+    },
+    {
+      path: "/balance",
+      element: <BalancePage/>
     },
   ]);
 
