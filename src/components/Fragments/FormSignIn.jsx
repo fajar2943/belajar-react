@@ -2,6 +2,7 @@ import React from 'react'
 import LabeledInput from "../Elements/LabeledInput"
 import CheckBox from "../Elements/CheckBox"
 import Button from "../Elements/Button"
+import { Link } from 'react-router-dom'
 
 const FormSignIn = () => {
   return (
@@ -26,6 +27,7 @@ const FormSignIn = () => {
             <CheckBox label="Keep me signed in" name="status" />
         </div>
         <Button variant="bg-primary w-full text-white" type="submit">Login</Button>
+        <Link to="/forgot-password" className="text-primary text-sm font-bold">Forgot Password?</Link>
     </form>
   )
 }
