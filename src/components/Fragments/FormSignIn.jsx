@@ -5,7 +5,7 @@ import Button from "../Elements/Button"
 
 const FormSignIn = () => {
   return (
-    <form action="">
+    <form action="/">
         <div className="mb-6">
             <LabeledInput
                 label="Email address"

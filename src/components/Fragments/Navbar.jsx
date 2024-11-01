@@ -67,14 +67,16 @@ const Navbar = () => {
             ))}
         </div>
         <div className='sticky bottom-12'>
-            <div className="flex bg-special-bg3 px-4 py-3 rounded-md">
-              <div className="mx-auto sm:mx-0">
-                <Icon.Logout/>
-              </div>
-                <div className="ms-3 text-special-bg2 hidden sm:block">
-                  Logout
+            <Link to="/login">
+              <div className="flex bg-special-bg3 px-4 py-3 rounded-md">
+                <div className="mx-auto sm:mx-0">
+                  <Icon.Logout/>
                 </div>
-            </div>
+                  <div className="ms-3 text-special-bg2 hidden sm:block">
+                    Logout
+                  </div>
+              </div>
+            </Link>
             <div className="border-b my-10 border-b-special-bg"></div>
             <div className="flex justify-between">
               <div className="mx-auto sm:mx-0 self-center">
